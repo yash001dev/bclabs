@@ -2,65 +2,6 @@
 import React, { useEffect } from "react";
 import Loader from "./Loader";
 
-const data = [
-  {
-    asset: "BTC/USD",
-    lastTrade: "$63,000.00",
-    change24h: "-2.21%",
-    change24hAmount: "-$1,426.18",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
-  },
-  {
-    asset: "ETH/USD",
-    lastTrade: "$3,408.90",
-    change24h: "-0.33%",
-    change24hAmount: "-$11.20",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-  },
-  {
-    asset: "DOGE/USD",
-    lastTrade: "$0.15",
-    change24h: "+15.75%",
-    change24hAmount: "+$0.02",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
-  },
-  {
-    asset: "ALGO/USD",
-    lastTrade: "$0.15",
-    change24h: "+0.00%",
-    change24hAmount: "$0.00",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/algorand-algo-logo.png",
-  },
-  {
-    asset: "DOT/USD",
-    lastTrade: "$5.64",
-    change24h: "+0.00%",
-    change24hAmount: "$0.00",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/polkadot-new-dot-logo.png",
-  },
-  {
-    asset: "UNI/USD",
-    lastTrade: "$9.79",
-    change24h: "+0.00%",
-    change24hAmount: "$0.00",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/uniswap-uni-logo.png",
-  },
-  {
-    asset: "COMP/USD",
-    lastTrade: "$45.67",
-    change24h: "-0.95%",
-    change24hAmount: "-$0.44",
-    tradeLink: "#",
-    logoLink: "https://cryptologos.cc/logos/compound-comp-logo.png",
-  },
-];
-
 const CryptoTable = () => {
   const [tableData, setTableData] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
