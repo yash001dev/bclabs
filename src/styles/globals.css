@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   background-color: black;
   color: white;
   /* Add background-image in top of the body; */
   background-image: url('../assets/BG.jpg');
   background-repeat: no-repeat;
   background-position: top;
-  
-   /* Set background image height to fixed height; */
-}
 
+  /* Set background image height to fixed height; */
+}

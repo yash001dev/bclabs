@@ -1,6 +1,6 @@
 // src/CryptoTable.js
-import React, { useEffect } from "react";
-import Loader from "./Loader";
+import React, { useEffect } from 'react';
+import Loader from './Loader';
 
 const CryptoTable = () => {
   const [tableData, setTableData] = React.useState([]);
@@ -9,12 +9,12 @@ const CryptoTable = () => {
     async function callAPI() {
       try {
         setIsLoading(true);
-        const jsonData = await fetch("/api/crypto-info");
+        const jsonData = await fetch('/api/crypto-info');
         const data = await jsonData.json();
         setTableData(data);
         setIsLoading(false);
       } catch (error) {
-        console.log("error", error);
+        console.log('error', error);
         setIsLoading(false);
       }
     }
@@ -30,7 +30,7 @@ const CryptoTable = () => {
             <th className="px-4 py-2">Last Trade</th>
             <th className="px-4 py-2">24H %</th>
             <th className="px-4 py-2">24H Change</th>
-            <th className="px-4 py-2 text-[#3980FF]">{"More >"}</th>
+            <th className="px-4 py-2 text-[#3980FF]">{'More >'}</th>
           </tr>
         </thead>
         {isLoading ? <Loader /> : null}
@@ -38,42 +38,35 @@ const CryptoTable = () => {
           {tableData.map((item, index) => (
             <tr key={index} className="">
               <td className="px-4 py-3 flex items-center">
-                <img
-                  src={item.logoLink}
-                  alt="logo"
-                  className="w-12 h-12 mr-2"
-                />
+                <img src={item.logoLink} alt="logo" className="w-12 h-12 mr-2" />
                 {item.asset}
               </td>
 
               <td className="px-4 py-3">{item.lastTrade}</td>
               <td
                 className={`px-4 py-3 ${
-                  item.change24h.includes("-")
-                    ? "text-[#FF5454]"
-                    : item.change24h === "+0.00%"
-                    ? "text-[#666666]"
-                    : "text-[#6DFFDC]"
-                }`}
-              >
+                  item.change24h.includes('-')
+                    ? 'text-[#FF5454]'
+                    : item.change24h === '+0.00%'
+                      ? 'text-[#666666]'
+                      : 'text-[#6DFFDC]'
+                }`}>
                 {item.change24h}
               </td>
               <td
                 className={`"px-4 py-3" ${
-                  item.change24hAmount.includes("-")
-                    ? "text-[#FF5454]"
-                    : item.change24hAmount === "$0.00"
-                    ? "text-[#666666]"
-                    : "text-[#6DFFDC]"
-                }`}
-              >
+                  item.change24hAmount.includes('-')
+                    ? 'text-[#FF5454]'
+                    : item.change24hAmount === '$0.00'
+                      ? 'text-[#666666]'
+                      : 'text-[#6DFFDC]'
+                }`}>
                 {item.change24hAmount}
               </td>
               <td className="px-4 py-3">
                 <a
                   href={item.tradeLink}
-                  className="bg-[#6DFF8B] text-black px-4 py-2 rounded text-[#00554B] hover:bg-[#00554B] hover:text-white"
-                >
+                  className="bg-[#6DFF8B] text-black px-4 py-2 rounded text-[#00554B] hover:bg-[#00554B] hover:text-white">
                   Trade
                 </a>
               </td>

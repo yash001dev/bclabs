@@ -1,26 +1,26 @@
-import { Inter } from "next/font/google";
-import Image from "next/image";
-import React from "react";
-import Logo from "../assets/logo.png";
-import CryptoTable from "@/components/CryptoTable";
-import SettingIcon from "../assets/settings.png";
-import BitCoinIcon from "../assets/bitcoin.png";
-import BNBIcon from "../assets/bnb.png";
-import SwapIcon from "../assets/swap.png";
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
+import React from 'react';
+import Logo from '../assets/logo.png';
+import CryptoTable from '@/components/CryptoTable';
+import SettingIcon from '../assets/settings.png';
+import BitCoinIcon from '../assets/bitcoin.png';
+import BNBIcon from '../assets/bnb.png';
+import SwapIcon from '../assets/swap.png';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 const menuItems = [
   {
-    name: "Exchange",
+    name: '교환',
   },
   {
-    name: "Last Transactions",
+    name: '마지막 거래',
   },
   {
-    name: "Invite Friend",
+    name: '친구를 초대하다',
   },
   {
-    name: "Notification",
+    name: '공고',
   },
 ];
 
@@ -48,38 +48,30 @@ export default function Home() {
             <button
               className=" text-white px-2 py-1  mr-4 border-primary border-2 rounded-tl-lg rounded-br-lg
           hover:bg-primary hover:text-black font text-sm
-          "
-            >
-              LOG IN
+          ">
+              로그인
             </button>
             <button
               className="bg-primary text-white px-2 py-1  mr-4 border-primary border-2 rounded-tl-lg rounded-br-lg
             hover:bg-white hover:text-black text-sm
-          "
-            >
-              SIGN UP
+          ">
+              가입하기
             </button>
           </div>
         </nav>
 
         <div id="hero-section" className="max-w-3xl m-auto text-center mt-14">
-          <h1 className="text-6xl">Easy send and Request Crypto.</h1>
+          <h1 className="text-6xl">암호화폐를 쉽게 보내고 요청하세요.</h1>
         </div>
-        <div
-          id="hero-sub-section"
-          className="max-w-[440px] m-auto text-center mt-14"
-        >
+        <div id="hero-sub-section" className="max-w-[440px] m-auto text-center mt-14">
           <p className="text-left">
-            Bring blockchain to the people. Solana supports experiences for
-            power users, new consumers, and everyone in between.
+            사람들에게 블록체인을 제공하세요. Solana는 고급 사용자, 신규 소비자 및 그 사이의 모든 사람을 위한 경험을
+            지원합니다.
           </p>
         </div>
         <CryptoTable />
 
-        <div
-          id="swap-token-section"
-          className="mt-16 border border-[#464646] p-5 rounded-[10px] mb-32"
-        >
+        <div id="swap-token-section" className="mt-16 border border-[#464646] p-5 rounded-[10px] mb-32">
           <section className="flex flex-row justify-between">
             <span className="text-xl uppercase font-semibold">Swap Tokens</span>
             <Image src={SettingIcon} alt="settings" width={32} height={32} />
@@ -101,9 +93,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center space-x-2 bg-black py-1.5 px-4 mb-1">
-                  <Image src={BitCoinIcon} alt="BTC" className="h-8 w-5" />{" "}
-                  {/* Replace with the appropriate image */}
-                  <span className="text-[#666666] text-[20px]">BTC {">"}</span>
+                  <Image src={BitCoinIcon} alt="BTC" className="h-8 w-5" /> {/* Replace with the appropriate image */}
+                  <span className="text-[#666666] text-[20px]">BTC {'>'}</span>
                 </div>
                 <p className="text-sm font-normal">
                   Balance: <span className="text-[#3980FF]">24,240</span>
@@ -117,9 +108,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center space-x-2 bg-black py-1.5 px-4 mb-1">
-                  <Image src={BNBIcon} alt="BTC" className="h-8 w-7" />{" "}
-                  {/* Replace with the appropriate image */}
-                  <span className="text-[#666666] text-[20px]">BTC {">"}</span>
+                  <Image src={BNBIcon} alt="BTC" className="h-8 w-7" /> {/* Replace with the appropriate image */}
+                  <span className="text-[#666666] text-[20px]">BTC {'>'}</span>
                 </div>
                 <p className="text-sm font-normal">
                   Balance: <span className="text-[#3980FF]">24,240</span>
@@ -131,8 +121,7 @@ export default function Home() {
             <button
               className="bg-primary text-white px-2 py-2  mr-4 border-primary border-2 rounded-tl-lg rounded-br-lg
             hover:bg-white hover:text-black text-sm w-56 font-medium
-          "
-            >
+          ">
               SWOP TOKENS
             </button>
           </section>
@@ -141,9 +130,7 @@ export default function Home() {
               <p>1 BTC = 32.4039 ETH</p>
               <p className="text-[#3980FF] text-sm">Free exchange</p>
             </div>
-            <div className="right-sub-sec text-[#666666] text-sm">
-              Updates in 4s
-            </div>
+            <div className="right-sub-sec text-[#666666] text-sm">Updates in 4s</div>
           </section>
         </div>
       </div>
