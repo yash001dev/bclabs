@@ -1,7 +1,28 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
+import Image from "next/image";
+import React from "react";
+import Logo from "../assets/logo.png";
+import CryptoTable from "@/components/CryptoTable";
+import SettingIcon from "../assets/settings.png";
+import BitCoinIcon from "../assets/bitcoin.png";
+import BNBIcon from "../assets/bnb.png";
+import SwapIcon from "../assets/swap.png";
 
 const inter = Inter({ subsets: ["latin"] });
+const menuItems = [
+  {
+    name: "Exchange",
+  },
+  {
+    name: "Last Transactions",
+  },
+  {
+    name: "Invite Friend",
+  },
+  {
+    name: "Notification",
+  },
+];
 
 export default function Home() {
   return (
